@@ -168,4 +168,4 @@ while True:
     time.sleep(30)
 
 
-# vim: ts=2 expandtab shiftwidth=2
+# vim: ts=4 expandtab shiftwidth=4
