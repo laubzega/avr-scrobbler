@@ -14,7 +14,9 @@ For an example from my living room see http://www.last.fm/user/LivingRoomAVR
 
 The initial version supports only Yamaha AVRs (tested on RX-A1050, but
 should work on many more models), hopefully patches for other brands will be
-forthcoming.
+forthcoming. Currently Spotify, Server and USB inputs are tracked, ask if you
+need others. Should you wish to add necessary code yourself, at http://www.remotecentral.com/cgi-bin/mboard/rs232-ip/thread.cgi?694
+there is a comprehensive list of Yamaha AVR commands.
 
 Credit's where credit's due: initial version of send_message() was lifted from https://github.com/thomas-villagers/avsend
 
