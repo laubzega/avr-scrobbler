@@ -15,7 +15,7 @@ try:
     AVR_IP = os.environ['AVR_IP']
     AVR_PORT = int(os.environ['AVR_PORT'])
 except KeyError:
-    AVR_IP = '192.168.1.157'
+    AVR_IP = '192.168.1.117'
     AVR_PORT = 50000
 
 try:
@@ -153,7 +153,7 @@ prev_info = load_state()
 while True:
     info = poll_receiver()
 
-    if info and info != prev_info and info["Playbackinfo"] != "Stop":
+    if info and info != prev_info and info["Playbackinfo"] == "Play":
         lastfm.scrobble(
             artist=info["Artist"],
             album=info["Album"],
@@ -161,7 +161,8 @@ while True:
             timestamp=int(time.time())
         )
 
-        print info['Artist'] + "," + info['Album'] + "," + info['Track']
+        #print info['Artist'] + "," + info['Album'] + "," + info['Track']
+        print info
         prev_info = info
         save_state(info)
 
