@@ -105,6 +105,13 @@ inps = {
         'Album': 'ALBUM',
         'Track': 'SONG',
         'Playbackinfo': 'PLAYBACKINFO'
+    }},
+
+    'AirPlay': {'prefix': '@AIRPLAY', 'comms': {
+        'Artist': 'ARTIST',
+        'Album': 'ALBUM',
+        'Track': 'SONG',
+        'Playbackinfo': 'PLAYBACKINFO'
     }}
 }
 
@@ -161,7 +168,6 @@ while True:
             timestamp=int(time.time())
         )
 
-        #print info['Artist'] + "," + info['Album'] + "," + info['Track']
         print info
         prev_info = info
         save_state(info)
